@@ -1,0 +1,48 @@
+package com.jafa.controller;
+
+import java.util.Calendar;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.jafa.domain.DateVO;
+import com.jafa.domain.ToDoVO;
+import com.jafa.repository.ToDoRepository;
+import com.jafa.util.CalendarUtil;
+
+@Controller
+@RequestMapping("/todo")
+public class ToDoController {
+	@Autowired
+	ToDoRepository toDoRepository;
+	
+	
+	//이미 날짜가 생성이 되고 
+	//후속작업으로 일정등록을 하는것임
+	@GetMapping("/{year}/{month}")
+	public String dayList(Model model,@PathVariable Integer month,
+			@PathVariable Integer year) {
+		//포매팅 이용 문자열로 
+		Calendar cal = Calendar.getInstance();
+		cal.set(year, month-1, 1);
+		
+		
+		//월별 해야할일
+		List<ToDoVO> todoList = toDoRepository.selectAllByMonth("20230301");
+		System.out.println(todoList);
+		
+		//월별 날짜 구현
+		List<DateVO> dateList = CalendarUtil.getDate(year, month-1);
+		model.addAttribute("dateList",dateList);
+		return "cal/dayList";
+		
+	}
+	
+	
+	
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- xml 설정으로 메세지소스 사용 -->
+<!-- 
+	빈의 id 속성은 반드시 messageSource로 지정해야한다
+	메세지 프로퍼티 파일의 경로지정은 basename, basenames로 한다
+	basenames는 여러개의 메세지 프로퍼티 파일을 지정할 수 있다.
+	메세지 파일의 루트경로는 클래스패스를 사용하면 경로의 구분은 지금처럼 .으로 구분하며 표기한다
+	또한 확장자인 .properties나 로케일 접미사인 ko,en 등은 붙이지 않는돠
+ -->
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+	<!-- 	<property name="basename" value="message01.greeting"/>  -->
+		<property name="basenames">
+			<list>
+				<value>message01.greeting</value>
+				<value>message01.welcome</value>
+			</list>
+		</property>
+		<property name="defaultEncoding" value="utf-8"/>
+	</bean>
+
+</beans>

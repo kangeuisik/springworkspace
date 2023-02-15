@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jafa.repository.ContactRepository">
+  <select id="contactList" resultType="contactVO">
+    select *from contact_my8
+  </select>
+  
+  <insert id="addContact">
+  	insert all
+  		<foreach collection="contactList" item="con">
+  			into contact_my8(cno,userName,phoneNumber)
+  			values(get_cno_seq,#{con.userName},#{con.phoneNumber})
+  		</foreach>
+  	select * from dual
+  </insert>
+  
+</mapper>

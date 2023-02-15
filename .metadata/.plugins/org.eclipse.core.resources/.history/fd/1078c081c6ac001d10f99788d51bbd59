@@ -1,0 +1,27 @@
+package com.jafa.controller;
+
+import java.util.List;
+
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.jafa.domain.DateVO;
+import com.jafa.util.CalendarUtil;
+
+@Controller
+@RequestMapping("/cal")
+public class CalendarController {
+	
+	@GetMapping("/dayList/{month}")
+	public String dayList(Model model,@PathVariable Integer month) {
+		List<DateVO> dateList = CalendarUtil.getDate(2023, month-1);
+		model.addAttribute("dateList",dateList);
+		return "cal/dayList";
+		
+	}
+	
+}

@@ -1,0 +1,40 @@
+package com.jafa.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.jafa.domain.SampleBean;
+
+
+@RequestMapping("/sample")
+@RestController
+public class SampleController {
+	
+	@GetMapping("/hello")
+	public String hello() {
+		return "hello everyone";
+	}
+	@GetMapping("/sampleBean")
+	public SampleBean getSampleBean() {
+		return new SampleBean(1L,"샘플1");
+	}
+	@GetMapping("/sampleList")
+	public List<SampleBean> getBeanList(){
+		List<SampleBean> beanList = new ArrayList<SampleBean>();
+		SampleBean bean1 = new SampleBean(1L,"샘플1");
+		SampleBean bean2 = new SampleBean(2L,"샘플2");
+		SampleBean bean3 = new SampleBean(3L,"샘플3");
+		SampleBean bean4 = new SampleBean(4L,"샘플4");
+		beanList.add(bean1);
+		beanList.add(bean2);
+		beanList.add(bean3);
+		beanList.add(bean4);
+		return beanList;
+	}
+}

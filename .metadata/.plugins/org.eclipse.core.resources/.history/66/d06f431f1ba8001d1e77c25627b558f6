@@ -1,0 +1,12 @@
+package com.jafa.domain;
+
+public class MemberVO {
+
+	private Long mno; 
+	private String memberId; 
+	private String password; 
+	private String email;
+	private boolean enalbed;
+	private List<AuthVO> authList;
+	
+}

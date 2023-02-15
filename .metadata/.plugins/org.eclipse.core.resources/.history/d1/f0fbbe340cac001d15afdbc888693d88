@@ -1,0 +1,16 @@
+package com.jafa.util;
+
+import java.util.Calendar;
+
+public class CalendarUtil {
+	public static void main(String[] args) {
+		Calendar cal = Calendar.getInstance();
+		cal.set(Calendar.MONTH, 2);
+		int dateMax = cal.getActualMaximum(Calendar.DATE);
+		
+		System.out.println(dateMax);
+		
+		
+	}
+		
+}

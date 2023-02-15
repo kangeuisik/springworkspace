@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jafa.repository.BoardRepository">
+
+  <select id="findAll" resultType="boardVO">
+    select * from Board_my1
+  </select>
+  
+  <select id="detail" resultType="boardVO">
+    select * from Board_my1 where bno=#{bno}
+  </select>
+  
+  <select id="save">
+    insert into board_my1(bno,title,content,writer) 
+    values(bno_my1_seq.nextval,#{title},#{content},#{writer})
+  </select>
+  
+  <select id="update">
+	update board_my1 set
+	title = #{title},
+	content = #{content}
+	where bno = #{bno}
+  </select>
+  <select id="delete">
+	delete from board_my1 where bno = #{bno}
+  </select>
+</mapper>

@@ -1,0 +1,21 @@
+package com.jafa.domain;
+
+import lombok.AllArgs
+import lombok.Builder;
+import lombok.NoArgsConstructor;Constructor;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+@Builder
+public class DateVO {
+	private int year;
+	private int month;
+	private int dayOfMonth;
+	private int dayOfWeek;
+}

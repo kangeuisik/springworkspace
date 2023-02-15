@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.jafa.repository.BoardRepository">
+
+  <select id="boardList" resultType="board">
+    select * from board_my8
+  </select>
+  
+  <delete id="delAllSelected">
+  	delete from board_my8
+  	<where>
+  		<foreach collection="bnoList" item="bno" separator="," open="bno in(" close=")">
+  			#{bno}
+  		</foreach>
+  	</where>
+  </delete>
+  
+  
+  
+</mapper>

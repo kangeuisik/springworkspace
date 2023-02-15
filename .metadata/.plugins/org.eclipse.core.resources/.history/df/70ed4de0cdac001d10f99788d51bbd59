@@ -1,0 +1,44 @@
+package com.jafa.domain;
+
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class DateVO {
+	private int year;
+	private int month;
+	private int dayOfMonth;
+	private int dayOfWeek;
+	
+	
+	//날짜마다 여러가지 메모를 쓸수 있게 ToDo를 리스트로 받는다
+	private List<ToDoVO> toDoList;
+	
+	
+	@Override
+	public String toString() {
+		Calendar cal = Calendar.getInstance();
+		cal.set(year, month-1,dayOfMonth);
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+		return sdf.format(cal.getTime());
+	}
+	
+	public void setToDoList(ToDoVO toDoVO) {
+		
+	}
+}

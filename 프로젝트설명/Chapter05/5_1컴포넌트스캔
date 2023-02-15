@@ -1,0 +1,11 @@
+@ComponentScan : 스프링빈 검색
+	-basePackges : 지정된 패키지 이하에서 @Component 에너테이션이 붙은 클래스를 찾아 스프링빈으로 만든다 
+	-basePackageClasses : 지정된 클래스가 존재하는 패키지 이하에서~
+	-excludeFilter
+		-@Filter
+		
+@Component
+	-@Cotroller : 컨트롤러
+	-@Service : 서비스로직 담당
+	-@Repository : DB연동담당
+	-@Configuration : 스프링 설정 정보관리

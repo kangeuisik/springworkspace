@@ -1,0 +1,15 @@
+1. ---이클립스에서 메이븐프로젝트 생성
+	-Java project 생성 
+	- 프로젝트 이름 : chap01
+	- 프로젝트 우클릭 - Configure - Convert to Maven project
+	- pom.xml : 
+		- dependencies 태그 내에 dependency 태그추가
+		- Maven repository - Spring-context 모듈 -
+		
+2. 메이븐 로컬 저장소
+	- C:\Users\s\.m2\repository 문제가 생기면 삭제
+	
+3. 의존 전이
+	-Spring-context 모듈을 사용하려면
+	-Spring-aop, Spring-beans 등의 모듈이 필요함/
+	- 필요한 의존설정을 자동으로 가져온다. (35page)

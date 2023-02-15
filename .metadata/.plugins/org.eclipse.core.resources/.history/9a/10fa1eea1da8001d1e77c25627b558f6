@@ -1,0 +1,7 @@
+package com.jafa.controller;
+
+import org.springframework.security.core.userdetails.User;
+
+public class memberDetail extends User{
+
+}

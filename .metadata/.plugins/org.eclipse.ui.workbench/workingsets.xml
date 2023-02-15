@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1671419177830_0" label="Java Main Sources" name="Java Main Sources"/>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1671419177862_1" label="Java Test Sources" name="Java Test Sources"/>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1672276835379_3" label="my_project00" name="my_project00">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/my_project00" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1672362491948_4" label="b_mvc_ex2" name="b_mvc_ex2">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/b_mvc_ex2" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1672364639142_5" label="board_paging" name="board_paging">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/board_paging" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1672619011378_6" label="b_mvc_mybatis" name="b_mvc_mybatis">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/b_mvc_mybatis" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1672630009153_7" label="b_mvc_mybatis_ex01" name="b_mvc_mybatis_ex01"/>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1672631240906_8" label="b_mvc_ex_mybatis" name="b_mvc_ex_mybatis">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/b_mvc_ex_mybatis_T" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1672704846963_9" label="a_mvc_mybatis_config" name="a_mvc_mybatis_config">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/a_mvc_ex_mybatis" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/a_mvc_mybatis_config" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1672798776827_10" label="a_mybatis_board01" name="a_mybatis_board01">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/a_mybatis_board01" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1672880960693_11" label="a_mybatis_board02" name="a_mybatis_board02">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/a_mybatis_board02" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1672884574817_12" label="a_mybatis_board03" name="a_mybatis_board03">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/a_mybatis_board03" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1672887858800_13" label="a_mybatis_practice_board01" name="a_mybatis_practice_board01"/>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1672964871484_14" label="a_mybatis_board04" name="a_mybatis_board04">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/a_mybatis_board04" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1673308128870_15" label="a_mybatis_board05" name="a_mybatis_board05">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/a_mybatis_board05" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1673396739269_16" label="a_mybatis_board07" name="a_mybatis_board07">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/a_mybatis_board07" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1673406289948_17" label="a_mybatis_homeworkboard" name="a_mybatis_homeworkboard">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/a_mybatis_homeworkboard" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1673482481635_18" label="a_mybatis_board08" name="a_mybatis_board08">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/a_mybatis_board08" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1674009464322_19" label="b_transaction_config" name="b_transaction_config">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/b_transaction_config" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1675038487975_20" label="a_validation" name="a_validation">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/a_validation" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1671419180610_2" label="Window Working Set" name="Aggregate for window 1671419180610"/>
+</workingSetManager>

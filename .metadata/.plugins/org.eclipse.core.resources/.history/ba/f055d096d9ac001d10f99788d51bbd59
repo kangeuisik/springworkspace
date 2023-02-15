@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jafa.repository.ToDoRepository">
+
+  <select id="selectAllByMonth" resultType="toDoVO">
+    select * from todo_tbl where todoDate 
+	between to_date(#{date},'yyyyMMdd')
+	and last_day(to_date(#{date},'yyyyMMdd'))
+  </select>
+  
+  
+  <insert id="save">
+  	insert into todo_tbl(id,memo,todoDate)
+	values(todo_seq.nextval,${memo},to_date(#{todoDate},'yyyyMMdd'));
+  </insert>
+  
+</mapper>

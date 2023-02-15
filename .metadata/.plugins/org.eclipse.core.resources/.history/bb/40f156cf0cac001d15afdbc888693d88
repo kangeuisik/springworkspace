@@ -1,0 +1,19 @@
+package com.jafa.util;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
+
+import com.jafa.domain.DateVO;
+
+public class CalendarUtil {
+	
+	public static List<DateVO> getDate(int year, int month){
+		List<DateVO> dateList = new ArrayList<DateVO>();
+		return null;
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+}

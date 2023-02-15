@@ -1,0 +1,52 @@
+package com.jafa.config;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.web.access.AccessDeniedHandler;
+import org.springframework.security.web.authentication.AuthenticationFailureHandler;
+
+import lombok.extern.log4j.Log4j;
+@Configuration
+@EnableWebSecurity
+@Log4j
+@ComponentScan("com.jafa.security")
+public class SecurityConfig extends WebSecurityConfigurerAdapter{
+	@Autowired
+	AccessDeniedHandler accessDeniedHandler;
+
+	@Autowired
+	AuthenticationFailureHandler authenticationFailureHandler;
+	
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+		http.authorizeRequests()
+			.antMatchers("/member/all").access("permitAll")
+			.antMatchers("/member/member").access("hasRole('ROLE_MEMBER')")
+			.antMatchers("/member/admin").access("hasRole('ROLE_ADMIN')"); 
+        http.formLogin(); // /logig으로 요청하면 스프링시큐리티가 제공하는 로그인 페이지로 이동
+        
+        http.exceptionHandling()
+        .accessDeniedHandler(accessDeniedHandler);
+        
+        http.formLogin()
+			.loginPage("/member/login") // 로그인 페이지 , 기본값:/login GET요청
+			.loginProcessingUrl("/member/login") // 로그인 처리 ,/login POST요청
+			.usernameParameter("loginId") // 아이디 name값 / username
+			.passwordParameter("loginPwd") // 비밀번호 name 값 /password
+        	.failureHandler(authenticationFailureHandler) // 로그인 실패 핸들러
+	}
+	
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.inMemoryAuthentication().withUser("admin").password("{noop}1234").roles("ADMIN","MEMBER");
+        auth.inMemoryAuthentication().withUser("kang").password("{noop}1234").roles("MEMBER");
+    }
+    
+    
+}
+

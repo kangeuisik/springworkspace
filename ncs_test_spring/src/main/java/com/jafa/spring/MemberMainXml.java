@@ -1,0 +1,17 @@
+package com.jafa.spring;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+import com.jafa.repository.MemberRepository;
+
+
+public class MemberMainXml {
+	public static void main(String[] args) {
+		ApplicationContext ctx 
+		= new GenericXmlApplicationContext("classpath:app-context.xml");
+		
+		MemberRepository memberRepository = ctx.getBean(MemberRepository.class);
+		memberRepository.findByName();
+	}
+}

@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<%@include file="../layout/header.jsp" %>
+<div class="container">
+	<div class="jumbotron">
+		<h1>글목록</h1>
+	</div>
+	<table class="table">
+		<tr>
+			<th>번호</th>
+			<th>제목</th>
+			<th>작성자</th>
+			<th>첨부파일 개수</th>
+		</tr>
+		<c:forEach var="b" items="${ list}">
+		<tr>
+			<td>${b.bno }</td>
+			<td><a href="${contextPath}/board/detail?bno=${b.bno}">${b.title }</a></td>
+			<td>${b.writer }</td>
+			<td>${b.attachFileCnt }</td>
+		</tr>
+		</c:forEach>
+	</table>
+ <a href="${contextPath }/board/write" class="btn btn-info">글쓰기</a>
+</div>
+<%@include file="../layout/footer.jsp" %>
+

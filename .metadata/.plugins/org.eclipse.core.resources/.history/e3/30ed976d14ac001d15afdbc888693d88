@@ -1,0 +1,58 @@
+package com.jafa.util;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
+
+import com.jafa.domain.DateVO;
+
+public class CalendarUtil {
+	
+	public static List<DateVO> getDate(int year, int month){
+		List<DateVO> dateList = new ArrayList<DateVO>();
+		Calendar cal = Calendar.getInstance(); // 오늘날짜
+		//월의 첫번째날의 요일
+		cal.set(year,month, 1); //2월1일
+		int firstDay = cal.get(Calendar.DAY_OF_WEEK);//수요일 4
+		for(int i=0; i<firstDay;i++) {
+			cal.add(Calendar.DATE, -1);
+			System.out.println(i);
+			System.out.println(cal.getTime());//지난달의 마지막 3일
+			DateVO vo = DateVO.builder()
+					.year(cal.get(Calendar.YEAR))
+					.month(cal.get(Calendar.MONTH)+1)
+					.dayOfMonth(cal.get(Calendar.DATE))
+					.dayOfWeek(cal.get(Calendar.DAY_OF_WEEK))
+					.build();
+			dateList.add(vo);
+		}
+		
+		
+		//이전달
+		cal.add(Calendar.MONTH, -1);
+		System.out.println("이전달"+cal.getTime());
+		
+		//이번달
+		cal = Calendar.getInstance();
+		cal.set(year,month, 1);
+		int lastDayOfMonth = cal.getActualMaximum(Calendar.DATE); //2월 28
+		for(int i = 1; i<=lastDayOfMonth; i++) {
+			cal.set(year, month,i);
+			DateVO vo = DateVO.builder()
+					.year(cal.get(Calendar.YEAR))
+					.month(cal.get(Calendar.MONTH)+1)
+					.dayOfMonth(cal.get(Calendar.DATE))
+					.dayOfWeek(cal.get(Calendar.DAY_OF_WEEK))
+					.build();
+			dateList.add(vo);
+		}
+	return dateList;
+	}
+	
+		//다음달
+	
+	public static void main(String[] args) {
+		
+		//System.out.println(getDate(2023,1));
+	}
+}

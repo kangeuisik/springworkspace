@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.jafa.dao.BookRepository">
+	<!-- 네임스페이스 : 패키지를 포함한 전체이름과 일치 해야한다. -->
+	
+	<!-- 
+		id속성 : 	BookRepository에 정의된 메소드 이름과 일치해야한다.
+		useGeneratedKeys : true로 지정하면 자동 생성 키를 반환 받는다. 
+		keyColumn : 데이터베이스 테이블 컬럼 
+		keyProperty : 파라미터로 전달된 BookVO의 세터 메소드(setId())
+	 -->
+	<insert id="addBook" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+		insert into book_mybatis(id,title,writer)
+		values(bookId_seq_mybatis.nextval,#{title},#{writer})
+	</insert>
+</mapper>

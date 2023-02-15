@@ -1,0 +1,11 @@
+package com.jafa.controller;
+
+import org.springframework.security.core.userdetails.User;
+
+import com.jafa.domain.MemberVO;
+
+public class MemberDetail extends User{
+
+
+	MemberVO memberVO; 
+}

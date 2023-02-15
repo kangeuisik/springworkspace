@@ -1,0 +1,8 @@
+package com.jafa.service;
+
+import org.springframework.security.core.userdetails.UserDetailsService;
+
+public class CustomUserDetailService implements UserDetailsService {
+	@Autowired
+	private MemberRepository memberRepository;
+}

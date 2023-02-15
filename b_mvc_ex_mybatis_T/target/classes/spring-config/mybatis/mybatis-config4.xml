@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<import resource="mybatis-base2.xml"/>
+	
+	<!-- 매퍼로 사용할 인터페이스 검색 -->
+	<!-- 설장 패키지이하에 존재하는 모든 인터페이스를 매퍼로 등록한다. -->
+	<mybatis-spring:scan base-package="com.jafa.dao"/>
+	
+</beans>

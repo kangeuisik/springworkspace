@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="b_mvc_mybatis"/>
+<aop-project name="chpa05_intro"/>
+<aop-project name="mvc_ex"/>
+<aop-project name="a_mvc_ex"/>
+<aop-project name="a_security"/>
+<aop-project name="chpa02"/>
+<aop-project name="a_mvc_mybatis_Fileupload"/>
+<aop-project name="a_mvc_mybatis_File02"/>
+<aop-project name="b_transaction_config">
+<aspect-definition advice-class-name="org.springframework.transaction.interceptor.TransactionInterceptor" advice-method-name="invoke" advice-method-parameter-types="org.aopalliance.intercept.MethodInvocation" advice-type="AROUND" aspect-end-line-number="21" aspect-name="org.springframework.transaction.interceptor.TransactionInterceptor#b_transaction_config#src/main/resources/spring-config/servlet-context.xml#21" aspect-start-line-number="21" factory-id="org.springframework.ide.eclipse.aop.core.javaAdvisorDefinitionElementFactory" file="/b_transaction_config/src/main/resources/spring-config/servlet-context.xml" pointcut-expression="(@within(org.springframework.transaction.annotation.Transactional) || @annotation(org.springframework.transaction.annotation.Transactional)) &amp;&amp; execution(* *..*(..))" proxy-target-class="false">
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:b_transaction_config|3:src/main/resources/spring-config/servlet-context.xml|7:beans:10|8:accountService:10" bean-file="/b_transaction_config/src/main/resources/spring-config/servlet-context.xml" bean-start-line="10" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/b_transaction_config/src/main/resources/spring-config/servlet-context.xml" source="=b_mvc_mybatis_config/C:\/Users\/s\/.m2\/repository\/org\/springframework\/spring-tx\/5.2.22.RELEASE\/spring-tx-5.2.22.RELEASE.jar=/maven.pomderived=/true=/=/org.eclipse.jst.component.dependency=/\/WEB-INF\/lib=/=/maven.pomderived=/true=/=/org.eclipse.jst.component.archivename=/spring-tx-5.2.22.RELEASE.jar=/=/maven.groupId=/org.springframework=/=/maven.artifactId=/spring-tx=/=/maven.version=/5.2.22.RELEASE=/=/maven.scope=/compile=/&lt;org.springframework.transaction.interceptor(TransactionInterceptor.class[TransactionInterceptor~invoke~Lorg.aopalliance.intercept.MethodInvocation;" source-start-line="-1" target="=b_transaction_config/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.jafa.service{AccountService.java[AccountService~pointTransfer~QTransferDTO;" target-start-line="18"/>
+</aspect-definition>
+</aop-project>
+<aop-project name="ncs_test_spring"/>
+<aop-project name="mvc_ex_XML"/>
+<aop-project name="chap04_review"/>
+<aop-project name="a_mybatis_board08"/>
+<aop-project name="a_mybatis_board04"/>
+<aop-project name="chap01"/>
+<aop-project name="a_mvc_controller"/>
+<aop-project name="b_mvc_ex_mybatis_T"/>
+<aop-project name="a_validation"/>
+<aop-project name="a_mybatis_homeworkboard"/>
+<aop-project name="chap-2_xml"/>
+<aop-project name="board_paging"/>
+<aop-project name="chpa08_xml"/>
+<aop-project name="my_project00"/>
+<aop-project name="a_transaction_config"/>
+<aop-project name="a_mybatis_board03"/>
+<aop-project name="a_mybatis_board07"/>
+<aop-project name="chap08"/>
+<aop-project name="chap04"/>
+<aop-project name="b_security_xml">
+<aspect-definition advice-class-name="org.springframework.transaction.interceptor.TransactionInterceptor" advice-method-name="invoke" advice-method-parameter-types="org.aopalliance.intercept.MethodInvocation" advice-type="AROUND" aspect-end-line-number="22" aspect-name="org.springframework.transaction.interceptor.TransactionInterceptor#b_security_xml#src/main/resources/spring-config/servlet-context.xml#22" aspect-start-line-number="22" factory-id="org.springframework.ide.eclipse.aop.core.javaAdvisorDefinitionElementFactory" file="/b_security_xml/src/main/resources/spring-config/servlet-context.xml" pointcut-expression="(@within(org.springframework.transaction.annotation.Transactional) || @annotation(org.springframework.transaction.annotation.Transactional)) &amp;&amp; execution(* *..*(..))" proxy-target-class="false">
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:b_security_xml|3:src/main/resources/spring-config/servlet-context.xml|7:beans:10|8:memberService:10" bean-file="/b_security_xml/src/main/resources/spring-config/servlet-context.xml" bean-start-line="10" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/b_security_xml/src/main/resources/spring-config/servlet-context.xml" source="=b_security_xml/C:\/Users\/s\/.m2\/repository\/org\/springframework\/spring-tx\/5.2.22.RELEASE\/spring-tx-5.2.22.RELEASE.jar=/maven.pomderived=/true=/=/org.eclipse.jst.component.dependency=/\/WEB-INF\/lib=/=/maven.pomderived=/true=/=/org.eclipse.jst.component.archivename=/spring-tx-5.2.22.RELEASE.jar=/=/maven.groupId=/org.springframework=/=/maven.artifactId=/spring-tx=/=/maven.version=/5.2.22.RELEASE=/=/maven.scope=/compile=/&lt;org.springframework.transaction.interceptor(TransactionInterceptor.class[TransactionInterceptor~invoke~Lorg.aopalliance.intercept.MethodInvocation;" source-start-line="-1" target="=b_security_xml/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.jafa.service{MemberService.java[MemberService~updateMemberType~QAuthVO;" target-start-line="39"/>
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:b_security_xml|3:src/main/resources/spring-config/servlet-context.xml|7:beans:10|8:memberService:10" bean-file="/b_security_xml/src/main/resources/spring-config/servlet-context.xml" bean-start-line="10" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/b_security_xml/src/main/resources/spring-config/servlet-context.xml" source="=b_security_xml/C:\/Users\/s\/.m2\/repository\/org\/springframework\/spring-tx\/5.2.22.RELEASE\/spring-tx-5.2.22.RELEASE.jar=/maven.pomderived=/true=/=/org.eclipse.jst.component.dependency=/\/WEB-INF\/lib=/=/maven.pomderived=/true=/=/org.eclipse.jst.component.archivename=/spring-tx-5.2.22.RELEASE.jar=/=/maven.groupId=/org.springframework=/=/maven.artifactId=/spring-tx=/=/maven.version=/5.2.22.RELEASE=/=/maven.scope=/compile=/&lt;org.springframework.transaction.interceptor(TransactionInterceptor.class[TransactionInterceptor~invoke~Lorg.aopalliance.intercept.MethodInvocation;" source-start-line="-1" target="=b_security_xml/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.jafa.service{MemberService.java[MemberService~join~QMemberVO;" target-start-line="26"/>
+</aspect-definition>
+</aop-project>
+<aop-project name="a_mvc_mybatis_ajax"/>
+<aop-project name="b_mvc_ex"/>
+<aop-project name="a_mvc_mybatis_config"/>
+<aop-project name="a_mybatis_board02"/>
+<aop-project name="a_mybatis_board06"/>
+<aop-project name="chap03"/>
+<aop-project name="b_mvc_ex2"/>
+<aop-project name="Environment_config"/>
+<aop-project name="chpa02_review"/>
+<aop-project name="a_mvc_ex_mybatis"/>
+<aop-project name="a_validation2"/>
+<aop-project name="b_mvc_mybatis_config"/>
+<aop-project name="MessageSource_config"/>
+<aop-project name="a_mybatis_board01"/>
+<aop-project name="a_mybatis_board05"/>
+</aop-reference-model>

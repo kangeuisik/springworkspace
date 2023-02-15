@@ -1,0 +1,87 @@
+1. pom.xml 의존라이브러리 추가
+	- spring- webmvc
+	- spring- jdbc
+	- spring- test
+	- tomcat- jdbc
+	- ojdbc6
+	- lombok
+	- jstl
+	
+2. mvc설정
+	-패키지 : com.jafa.config
+	- RootConfig : 스프링 빈 설정
+		@configuration
+		
+	- ServletConfig : 디스패쳐 서블릿 설정 //중간에서 지휘자역할 
+		-모든요청을 받음
+		@configuration
+		@EnableWebMvc
+		@ComponentScan
+		 WebMvcConfigurer impl
+		  	- configureViewResolver() : 뷰 설정메소드
+		  		registry.jsp("/WEB-INF/views/",".jsp");
+		  	- addResourceHandler() : 정적자원(이미지, JS, CSS) 폴더
+		  		registry.addResourceHandler("/resources/**")
+		  		.addResourceLocations("/resources/");
+		  	
+	- WebConfig : 배포설명자(deployment Descriptor)
+		- extend AACD(AbstractAnnotationConfigDispatcherServletInitializer) 상속
+		- getRootConfigClasses()새 배열 RootConfig.class
+			new Class[] {RootConfig.class};
+		- getServletCofigClasses() : 새 배열 ServletConfig.class
+			new Class[] {ServletConfig.class};
+		- getServletMappings() : 디스패쳐서블릿매핑 
+			new String[] {"/"};
+		- getServletFilters() :한글필터
+			CharacterEncodingFilter filter = new CharacterEncodingFilter();
+			filter.setEncoding("utf-8");
+			filter.setForceEncoding(true);
+		
+3. 컨트롤러, 뷰페이지(디스패쳐서블릿), 정적자원
+	- com.jafa.controller.HomeController , @controller
+	- src/main/webapp/resources/css/style.css
+	- src/main/webapp/resources/js/main.js
+	
+4. 테스트영역
+	-src/test/java
+	-src/test/resources
+	
+4-1.
+ 	-클래스
+ 	-어노테이션
+ 		@RunWith(SpringJUnit4ClassRunner.class)
+		@ContextConfiguration(classes= {RootConfig.class,ServletConfig.class})
+		@WebAppConfiguration
+
+
+5. 커넥션 풀 설정
+	- RootConfig
+	- DataSource 객체 스프링 등록 빈설정
+		 -driver : oracle.jdbc.driver.OracleDriver
+		 -url : jdbc:oracle:thin:@localhost:1521:XE
+		 
+		 
+6. 복사 
+	.project
+	pom.xml
+	제목 및 그룹아이디 복사 된이름으로 바꾸고
+	임포트 메이븐 existing
+
+## XML 설정
+
+1. root-context.xml
+	- src/main/resources/config
+2. servlet-context.xml
+	- src/main/resources/config
+	- 아래 nameSpaces - context ,mvc 체크
+	- ViewResolver
+	- ResourcesHandler 등록
+	- annotation-driven 등록
+	
+3. web.xml
+	- ContextLoaderListener 리스너 배치
+	- 초기화 파라미터(context-Param): contextConfigLocation 루트설정 파일경로 전달
+	- 디스패쳐 서블릿 등록
+		+ 초기화 파라미터(init-Param) : contextConfigLocation -> 서블릿설정 파일경로 전달
+	- ServletMapping 설정
+	- 한글 필터 설정

@@ -1,0 +1,13 @@
+package com.jafa.controller;
+
+import org.springframework.security.core.userdetails.User;
+
+import com.jafa.domain.MemberVO;
+
+public class MemberDetail extends User{
+
+	private static final long serialVersionUID = 7582267635973165570L;
+	
+	
+	MemberVO memberVO; 
+}

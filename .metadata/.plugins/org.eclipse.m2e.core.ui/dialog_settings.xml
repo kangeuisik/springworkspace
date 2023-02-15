@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="MessageSource_config"/>
+			<item value="Environment_config"/>
+			<item value="b_mvc_ex"/>
+			<item value="a_mvc_ex"/>
+			<item value="mvc_ex_XML"/>
+			<item value="mvc_ex"/>
+			<item value="chpa08_xml"/>
+			<item value="chap08"/>
+			<item value="chpa05_intro"/>
+			<item value="chap04_review"/>
+			<item value="chpa03_review"/>
+			<item value="chap03"/>
+			<item value="chap-2_xml"/>
+			<item value="chpa02"/>
+			<item value="chap01"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="MessageSource_config"/>
+			<item value="Environment_config"/>
+			<item value="b_mvc_ex"/>
+			<item value="a_mvc_ex"/>
+			<item value="mvc_ex_XML"/>
+			<item value="mvc_ex"/>
+			<item value="chpa08_xml"/>
+			<item value="chap08"/>
+			<item value="chpa05_intro"/>
+			<item value="chap04_review"/>
+			<item value="chpa03_review"/>
+			<item value="chap03"/>
+			<item value="chap-2_xml"/>
+			<item value="chpa02"/>
+			<item value="chap01"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\s\Spring_workSpace\a_mvc_mybatis_ajax"/>
+			<item value="\\192.168.1.81\sts-workspace-root\spring_lesson\a_mvc_ex"/>
+			<item value="C:\Users\s\Spring_workSpace\b_mvc_ex_"/>
+			<item value="C:\Users\s\Spring_workSpace\b_mvc_ex"/>
+			<item value="C:\Users\s\Spring_workSpace\ncs_test_spring"/>
+			<item value="C:\Users\s\Spring_workSpace\a_security"/>
+			<item value="C:\Users\s\Spring_workSpace\a_security_java"/>
+			<item value="C:\Users\s\Spring_workSpace\b_security_xml"/>
+			<item value="C:\Users\s\Spring_workSpace\a_validation2"/>
+			<item value="C:\Users\s\Spring_workSpace\a_validation"/>
+			<item value="C:\Users\s\Spring_workSpace\a_mvc_mybatis_File02"/>
+			<item value="C:\Users\s\Spring_workSpace\a_mvc_mybatis_Fileupload"/>
+			<item value="C:\Users\s\Spring_workSpace\b_mvc_mybatis_config"/>
+			<item value="C:\Users\s\Spring_workSpace\b_transaction_config"/>
+			<item value="C:\Users\s\Spring_workSpace\a_transaction_config"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>

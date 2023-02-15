@@ -1,0 +1,70 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<%@include file="../../layout/header.jsp" %>
+<div class="container">
+	<div class="jumbotron">
+		<h1>달력</h1>
+	</div>
+	<h3>${month}월</h3>
+	<table class="table" >
+	 	<tr>
+	 		<th>월</th>
+	 		<th>화</th>
+	 		<th>수</th>
+	 		<th>목</th>
+	 		<th>금</th>
+	 		<th>토</th>
+	 		<th>일</th>
+	 	</tr>	
+	<c:forEach items="${dateList }" var="date">
+		<!-- 요일이 첫번째 요일이면 tr여는태그 추가 -->
+		<c:if test="${date.dayOfWeek==1 }">
+		<tr>
+		</c:if>
+		
+			<!-- 월의 전달 다음달 날짜안나오게 조건넣기 -->
+			<c:if test="${date.month eq month }">
+			<td id="inform">		
+				<a href="${date.month }"  class="data">${date.dayOfMonth }
+				 <input type="hidden" name="day" value="${date.dayOfMonth }"> </a>
+			</td>
+			</c:if>
+			<c:if test="${date.month ne month }">
+			<td></td>
+			</c:if>
+		
+		<!-- 요일이 마지막요일이면 tr닫는태그 추가 -->	
+		<c:if test="${dat.dayOfWeek==7 }">
+		</tr>
+		</c:if>
+	</c:forEach>
+	</table>
+	<table class="table work">
+		<tr>
+			<th>${month }월 
+		</tr>
+		<tr>
+			<th>ddd</th>
+			<th>ddd</th>
+			<th>ddd</th>
+			<th>ddd</th>
+		</tr>
+			<button class="btn">확인</button>
+	</table>
+</div>
+<%@include file="../../layout/footer.jsp" %>
+<script>
+$(function(){
+	
+	$('.work').hide();
+	
+
+	$('#inform a').on('click',function(){
+		let day = $('input[name="day"]').val();
+		console.log(day);
+		$('.work').show();
+			
+		});
+	});
+</script>

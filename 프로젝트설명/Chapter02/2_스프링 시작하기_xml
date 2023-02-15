@@ -1,0 +1,16 @@
+## 톰캣 서버 생성
+
+1. Dynamic web Project 에서 메이븐 프로젝트 변환
+	-프로젝트 : chap02_xml
+	-Content Directory : "WebContent"로 생성
+	- 기존의 src/main/webapp과 같음
+	- 메이븐 프로젝트 변경후 Spring-context 의존 라이브러리 추가
+		
+2. 예제코드
+	chpa02(project) - chap02.Greeter
+		-/src/main/java에 작성
+	-스프링활용
+		-/src/main/resources/applicationContext.xml : 스프링 빈 설정 정보관리 xml파일
+		 이클립스 마켓에서 sts3 - 스프링툴즈3 설치
+		-SpringMain.java : 스프링 컨테이너에서 스프링빈을 가져옴
+		

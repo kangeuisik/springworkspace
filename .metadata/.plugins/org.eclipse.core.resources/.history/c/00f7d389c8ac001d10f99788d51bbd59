@@ -1,0 +1,13 @@
+package com.jafa.repository;
+
+import java.util.Date;
+import java.util.List;
+
+import com.jafa.domain.ToDoVO;
+
+public interface ToDoRepository {
+
+	List<ToDoVO> selectAllByMonth(String date); //한달한달 단위로
+	//데이터
+					
+}

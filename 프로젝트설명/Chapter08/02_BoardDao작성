@@ -1,0 +1,8 @@
+
+1. 모든 게시물 목록
+	- jdbcTemplet 필등 생성
+		- DataSource 생성자 주입
+	- jdbcTemplet.query(
+			sql문,
+			rowMapper<타입지정>인터페이스 구현체, 
+			pstmt바인딩(가변인자))

@@ -1,0 +1,9 @@
+1676335073495	Move 'webapp' to 'a_mvc_mybatis_ajax'
+1676335082154	Rename resource 'webapp'
+1676338039551	Delete element
+1676341216797	Copy file
+1676341526611	Move 'dayList.jsp' to 'cal'
+1676420409940	Rename type 'CalendarController'
+1676420883952	Copy compilation unit
+1676420993454	Copy file
+1676428967282	Extract local variable 'toDoRepository2'

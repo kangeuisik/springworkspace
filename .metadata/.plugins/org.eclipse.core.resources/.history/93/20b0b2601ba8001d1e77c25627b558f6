@@ -1,0 +1,5 @@
+package com.jafa.repository;
+
+public interface MemberRepository {
+
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jafa.dao.MemberDao"><!-- 인터페이스경로 -->
+  <select id="findByMno" resultType="com.jafa.domain.MemberVO"> <!-- 메소드이름, VO -->
+    select * from Member_mybatis where mno = #{mno}
+  </select>
+</mapper>

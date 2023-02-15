@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jafa.repository.BoardRepository">
+  
+  <resultMap type="boardVO" id="boardMap">
+  	<result property="bno" column="b_bno"/>
+  	<result property="title" column="b_title"/>
+  	<result property="content" column="b_content"/>
+  	<result property="writer" column="b_writer"/>
+  	<result property="writeDate" column="write_Date"/>
+  </resultMap>
+
+  <select id="list" resultType="boardVO">
+   select * from board_list
+  </select>
+
+  <select id="detail" resultMap="boardMap">
+   	select * from board_my2 where b_no = #{bno}
+  </select>
+  
+  <insert id="save" useGeneratedKeys="true" keyProperty="bno" keyColumn="b_no">
+  insert into board_my2(b_no,b_title,b_content,b_writer) 
+  values(bno_my2_seq.nextval,#{title},#{content},#{writer})
+  </insert>
+  
+  
+</mapper>
